@@ -1,19 +1,16 @@
 <template>
     <div class="outside">
-        <div class="container left">
-            <p>Test</p>
-        </div>
-        <div class="container right">
-            <p>Test</p>
-        </div>
+        <AddTutorial></AddTutorial>
     </div>
 </template>
 
 <script>
 
+import AddTutorial from "@/components/AddTutorial.vue";
+
 export default {
     name: "BodyContent",
-    components: {},
+    components: {AddTutorial},
     props: {
         title: String,
     }
@@ -26,17 +23,5 @@ export default {
     padding: 0 30px 0 30px;
     border: 1px solid var(--color-border);
     border-radius: 8px;
-}
-.left {
-    width: 20%;
-
-}
-.right {
-    width: 80%;
-    margin: 3rem 1rem 3rem 1rem;
-    display: flex;
-    padding-left: 100px;
-    flex-wrap: wrap;
-
 }
 </style>
